@@ -1,0 +1,130 @@
+body{
+    background-color:#02101E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+nav.navbar{
+    background-color:#25292d;
+}
+div.bgcont{
+    background: #f9e7d6;
+    padding: 30px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+div.editar{
+    background: #f9e7d6;
+    padding: 30px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+div.title-login{
+    text-align: center;
+    color: white;
+    background-color: #dd3a00;
+    padding: 8px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+footer{
+    margin-top: 40px;
+    padding: 35px;
+    color: white;
+    background-color: #333333;
+}
+img.logo{
+    text-align: center;
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 8px;
+}
+.urlconten{
+    background-color: wheat;
+}
+img.navb{
+    width: 80px;;
+    height:auto;
+    margin-bottom: 8px;
+}
+button.ingre{
+    background-color: #02101E;
+    color: white;
+}
+.btn-orang{
+    background-color:#DD3A00;
+    color: white;
+}
+.btn-orang:hover{
+    border-color:#DD3A00;
+    color: #DD3A00;
+    background-color:transparent;
+}
+.btn-oscuro{
+    background-color: #06325e;
+    color: white;
+}
+.btn-oscuro:hover{
+    border-color:#DD3A00;
+    color: #DD3A00;
+    background-color:transparent;
+}
+.btn-delete{
+    background-color: #C82333;
+    color: white;
+}
+.btn-delete:hover{
+    border-color:#DD3A00;
+    color: #DD3A00;
+    background-color:transparent;
+}
+button.ingre:hover{
+    background-color: #DD3A00;
+    border-color: transparent;
+    color: white;
+}
+h3.title{
+    margin-top: 15px;
+}
+h1.title-enlace{
+    color:wheat;
+}
+h1.title-lista{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+h3.title-lista{
+    color: white;
+}
+.show-url{
+    color: white;
+}
+.navbar{
+    padding-top:0px;
+    padding-bottom: 0px;
+}
+table.table{
+    background-color: #e4e4e4;
+    border-radius: 0px 0px 10px 10px;
+}
+thead.table{
+    background-color: #25292d;
+    color: white;
+    
+}
+.table thead th{
+ border-top: 0px;
+}
+.btn-outline-success{
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin-left: 6px;
+    border-color:#FF4300 ;
+    background-color: transparent;
+    color: #FF4300;
+}
+
+.btn-outline-success:hover{
+    background-color: #DD3A00;
+    border-color: transparent;
+}

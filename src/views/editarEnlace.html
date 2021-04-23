@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html' %}
+{% block titulo %} Usuario {% endblock %} 
+
+{% block contenido %}
+<div class="containe-fluid">
+  <nav class="navbar navbar justify-content-between">
+
+    <div class="row ">
+      <img src="/static/img/logoforlin.png" alt="" class="navb">
+        <h3 style="color:white" class="title">ForLink</h3>
+    </div>
+
+    <form class="form-inline pe-5">
+        <a class="btn btn-orang mr-2 my-2 my-sm-0" href="/my/enlaces">By enlaces</a>
+        <a class="btn btn-orang my-2 my-sm-0" href="/logout">Salir</a>
+  
+    </form>
+  </nav>
+</div>
+<div class="row justify-content-center">
+  <div  class="col-md-4 pt-5">
+    <div class = " col-md-12 title-login">
+      <h1 >Editar Link</h1>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-4 editar">
+      <form  method="POST">
+        <div class="form-group">
+          <label for="Link">Link Original</label>
+          <input type="text" class="form-control" name="Link" id="exampleInputLink" aria-describedby="Link" placeholder="Link" value="{{date[0][1]}}">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputAcortado">Link Acortado</label>
+          <input type="text" class="form-control" name="Acortado" id="exampleInputEmail1" aria-describedby="Acortado" placeholder="Acortado" value="{{date[0][2]}}">
+        </div>
+        <br>
+       <div class="row justify-content-center">
+        <button type="submit" class="btn btn-orang mr-2">Editar</button>
+        <a  href="/my/enlaces" class="btn btn-orang ">Volver</a>
+       </div>
+    </form>
+    </div>
+  </div>
+{% endblock %}

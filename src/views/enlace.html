@@ -1,0 +1,40 @@
+{% extends 'layouts/base.html' %}
+{% block titulo %} Usuario {% endblock %} 
+ 
+ {% block contenido %}
+<div class="containe-fluid">
+  <nav class="navbar navbar justify-content-between">
+    {% if sesion%}
+    <div class="row ">
+      <img src="/static/img/logoforlin.png" alt="" class="navb">
+        <h3 style="color:white" class="title">ForLink</h3>
+    </div>
+    {% endif %}
+    <form class="form-inline pe-5">
+        <a class="btn btn-orang mr-2 my-2 my-sm-0" href="/my/enlaces">By enlaces</a>
+        <a class="btn btn-orang my-2 my-sm-0" href="/logout">Salir</a>
+  
+    </form>
+  </nav>
+</div>
+
+<div class="container">
+  <form action="{{ url_for('enlaceCrear') }}" method="POST">
+  <fieldset class="cf pb-3">
+    <div class="row justify-content-lg-center">
+      <img src="/static/img/Ok.png" alt="" class="logo">
+    </div>
+    <div class="text-center ">
+      <h1 class="title-enlace">¡Acortador de enlaces!</h1>
+    </div>
+    <br>
+    <label class="show-url" for="shorten_url">Ingrese  URL para acortar</label>
+    <input id="shorten_url" class="shorten-input" autocomplete="off" name="url" type="text" value="" placeholder="Acorta tu enlace">
+    <button type="submit" class="button button btn-outline-success ">Acortar</button>
+  </fieldset>
+  </form>
+  <div class="col-md-12 text-center pt-5 pb-5 urlconten">
+      <h2>{{ url}}</h2>
+  </div>
+</div>
+{% endblock %}

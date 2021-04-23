@@ -1,0 +1,80 @@
+{% extends 'layouts/base.html' %} 
+{% block titulo %} Productos {% endblock %} 
+
+{% block contenido %}
+<div class="containe-fluid">
+  <nav class="navbar navbar justify-content-between">
+    {% if sesion%}
+    <div class="row ">
+      <img src="/static/img/logoforlin.png" alt="" class="navb">
+        <h3 style="color:white" class="title">ForLink</h3>
+    </div>
+    {% endif %}
+    <form class="form-inline pe-5">
+        <a class="btn btn-orang mr-2 my-2 my-sm-0" href="/my/enlaces">By enlaces</a>
+        <a class="btn btn-orang my-2 my-sm-0" href="/logout">Salir</a>
+  
+    </form>
+  </nav>
+</div>
+
+<div class="container">
+  <br>
+  <div class ="row justify-content-center ">
+    <img src="/static/img/lista.png" alt="" class="logo">
+  </div>
+  <h1 class="title-lista">Mi lista de links acortados</h1>
+
+  <div class="row col-md-12 justify-content-end">
+    <a href="{{ url_for('enlaceCrear') }}" class="btn btn-orang mb-2 ">Nuevo <i class="fas fa-plus-square fa-2x"></i></a>
+  </div>
+  <div class="container">
+
+    <table class=" col-md-12 table">
+      <thead class="table">
+          <tr>
+              <th scope="col">Enlace Original</th>
+              <th scope="col">Enlace Corto</th>
+              <th scope="col">Acciones</th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for link in links %}
+        <tr>
+          <td>{{link[1]}}</td>
+          <td>{{link[2]}}</td>
+          <td class="">
+            <!-- Button trigger modal -->
+            <a href="/update/{{link[0]}}" class="btn btn-oscuro">Editar</a>
+            <button type="button" class="btn btn-delete" data-toggle="modal" data-target="#exampleModalLong">Eliminar</button>
+          </td>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Eliminar Registro</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ¿Seguro que se desa elminar el Registro?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="/eliminar/{{link[0]}}" class="btn btn-delete ">Eliminar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tr>
+        {%endfor%}
+      </tbody>
+  </table>
+  </div>
+
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'layouts/base.html' %} 
+{% block titulo %} Login {% endblock %}
+
+{% block contenido %}
+<div class="containe-fluid">
+  <nav class="navbar navbar justify-content-between">
+  
+    <div class="row ">
+      <img src="/static/img/logoforlin.png" alt="" class="navb">
+        <h3 style="color:white" class="title">ForLink</h3>
+    </div>
+
+    <form class="form-inline pe-5">
+      <a class="btn btn-orang my-2 my-sm-0 mr-2" href="/login">Ingresar</a>
+      <a class="btn btn-orang my-2 my-sm-0" href="/usuario/create">Registrar</a>
+    </form>
+  </nav>
+</div> 
+
+
+<div class="container" >
+  <div class="row  justify-content-lg-center pt-5 logime" >
+    <div class="col-md-4  ">
+     <div class="">
+      <div class ="row justify-content-center ">
+        <img src="/static/img/Online.png" alt="" class="logo">
+      </div>
+     </div>
+      <div class = " title-login">
+        <h1>Bienvenido</h1>
+      </div>
+      <div class="col-md-12 bg-white bgcont">
+        <form action="{{ url_for('login') }}" method="POST">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <br>
+          <button type="submit" class="btn ingre">Ingresar</button>
+      </form>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
